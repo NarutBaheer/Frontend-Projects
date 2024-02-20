@@ -1,0 +1,167 @@
+:root {
+    --primary-color: #007bff;
+    --hover-color: #0056b3;
+    --background-gradient-start: #f4f4f4;
+    --background-gradient-end: #e6e9f0;
+    --text-color: #333;
+    --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body {
+    font-family: var(--font-stack); 
+    margin: 0;
+    padding: 40px 20px; 
+    background: linear-gradient(270deg, #f4f4f4, #e8e8e8);
+    background-size: 400% 400%;
+    color: var(--text-color); 
+    animation: AnimationName 15s ease infinite;
+}
+
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+
+#story-container {
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px; 
+    box-shadow: 0 0 20px rgba(0,0,0,0.1); 
+    margin: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+#story-container {
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+    margin: auto;
+    transition: all 0.5s ease-out;
+    border: 1px solid transparent;
+    background-clip: padding-box, border-box;
+    position: relative;
+    perspective: 1500px;
+}
+
+#story-container::before {
+    content: '';
+    position: absolute;
+    top: -2px; right: -2px; bottom: -2px; left: -2px;
+    z-index: -1;
+    background: linear-gradient(235deg, #00d4ff, #790951, #020024);
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+#story-container:hover {
+    transform: translateY(-5px) rotateX(5deg);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+#story-container:hover::before {
+    opacity: 1;
+}
+
+#story-container:hover #story-text {
+    color: white;
+}
+#story-text{
+    transition:color 0.3s ease;
+}
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+    display: inline-block; /* Allows transform to work */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#story-container:hover h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5);
+    animation: wiggle 0.3s ease-in-out;
+}
+
+#choices-container {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.1); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+#baheer-image {
+    width: 180px; 
+    height: auto;
+    border-radius: 9%;
+    border: 4px solid var(--primary-color); 
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+#baheer-image:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 12px 24px rgba(0,0,0,0.25); 
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    #story-container {
+        padding: 20px;
+    }
+
+    #baheer-image {
+        width: 150px;
+    }
+}
+
