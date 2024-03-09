@@ -1,0 +1,92 @@
+/* Apply a reset to remove default margin, and padding*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+/* Styling for the main container of the calendar */
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: #14213D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the calendar itself */
+.calender{
+    background-color: black;
+    color: lightgray;
+    width: 450px;
+    height: 520px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .4);
+}
+
+.month{
+    width: 100%;
+    height: 120px;
+    background-color: #FCA311;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.month h1{
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.month p{
+    font-size: 16px;
+}
+
+.weekdays{
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+/* Styling for individual day names within the weekdays section */
+.weekdays div{
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.days{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+}
+
+.days div{
+    font-size: 14px;
+    margin: 3px;
+    width: 57.5px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the hover effect on non-empty day elements */
+.days div:hover:not(.empty){
+    border: 2px solid gray;
+    cursor: pointer;
+}
+
+/* Styling for highlighting the current day */
+.today{
+    background-color: #FCA311;
+}
