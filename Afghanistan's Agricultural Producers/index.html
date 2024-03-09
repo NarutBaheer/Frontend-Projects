@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afghan Agricultural Product Form with Customer Inputs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="agriProductForm">
+        <h2>Afghan Agricultural Product Information</h2>
+        <P>Please fill out each field one by one. You won't be able to proceed to the other fields if you leave even one empty.</P>
+        <div class="form-group">
+            <label for="productName">Product Name:</label>
+            <input type="text" id="productName" name="productName" required>
+            <span class="error-message" id="productNameError"></span>
+        </div>
+        <div class="form-group">
+            <label for="productType">Product Type:</label>
+            <input type="text" id="productType" name="productType" required>
+            <span class="error-message" id="productTypeError"></span>
+        </div>
+        <div class="form-group">
+            <label for="harvestDate">Harvest Date:</label>
+            <input type="text" id="harvestDate" name="harvestDate" placeholder="YYYY-MM-DD" required>
+            <span class="error-message" id="harvestDateError"></span>
+        </div>
+        <div class="form-group">
+            <label for="region">Region of Origin:</label>
+            <input type="text" id="region" name="region" required>
+            <span class="error-message" id="regionError"></span>
+        </div>
+        <div class="form-group">
+            <label for="organicCertified">Organic Certified:</label>
+            <select id="organicCertified" name="organicCertified">
+                <option value="">Select...</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <span class="error-message" id="organicCertifiedError"></span>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity (kg):</label>
+            <input type="text" id="quantity" name="quantity" required>
+            <span class="error-message" id="quantityError"></span>
+        </div>
+        <div class="form-group">
+            <label for="pricePerKg">Price Per Kg (AFN):</label>
+            <input type="text" id="pricePerKg" name="pricePerKg" required>
+            <span class="error-message" id="pricePerKgError"></span>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description">
+            <span class="error-message" id="descriptionError"></span>
+        </div>
+        <div class="form-group">
+            <label for="customerFeedback">Customer Feedback:</label>
+            <input type="text" id="customerFeedback" name="customerFeedback" placeholder="Your feedback">
+            <span class="error-message" id="customerFeedbackError"></span>
+        </div>
+        <div class="form-group">
+            <label for="deliveryPreference">Preferred Delivery Method:</label>
+            <input type="text" id="deliveryPreference" name="deliveryPreference" placeholder="E.g., Local pickup, Delivery">
+            <span class="error-message" id="deliveryPreferenceError"></span>
+        </div>
+        <div class="form-group">
+            <label for="productRequest">Specific Product Request/Preference:</label>
+            <input type="text" id="productRequest" name="productRequest" placeholder="Any specific request">
+            <span class="error-message" id="productRequestError"></span>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
