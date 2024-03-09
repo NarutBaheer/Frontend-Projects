@@ -1,0 +1,138 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #348f50, #56b4d3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.calculator-container {
+    display: flex; /* This will align the child divs side by side */
+    justify-content: center; /* This will center them horizontally */
+    align-items: center; /* This will center them vertically */
+    gap: 20px;
+}
+.calculator {
+    width: 300px;
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+@keyframes textColorFadeIn {
+    0% {
+        color: #aaa; /* Light grey start */
+    }
+    100% {
+        color: #fff; /* Fade into white */
+    }
+}
+
+.calculator-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 2em; /* Slightly larger font size */
+    font-weight: 700; /* Bold font weight */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Text shadow for depth */
+    animation: textColorFadeIn 1s ease-out forwards; /* Animation for color transition */
+}
+
+.display {
+    width: 90%;
+    background: #000000;
+    border: none;
+    border-radius: 9px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn:hover {
+    background-color: #444;
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+.operation {
+    color: #4CAF50;
+}
+
+.special {
+    color: #f44336;
+}
+
+.equals {
+    grid-column: 3 / 5;
+    border-radius: 30px;
+    background-color: #4CAF50;
+}
+
+
+.calculator-history {
+    margin-top: 20px;
+    background: #2c2c2c;
+    border-radius: 10px;
+    padding: 10px;
+    max-height: 150px;
+    overflow-y: auto; /* Allows scrolling if history is long */
+    
+}
+
+.history-title {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+}
+
+#history-list li {
+    color: #ddd;
+    border-bottom: 1px solid #444;
+    padding: 5px 0;
+    font-size: 0.9em;
+    word-break: break-all; /* Ensures long numbers don't overflow */
+}
+
+#clear-history {
+    background: #ff6347; /* Tomato color for the clear button */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 0.8em;
+    width: 100%;
+    box-sizing: border-box; /* Ensures the button width includes padding */
+    transition: background-color 0.3s;
+}
+
+#clear-history:hover {
+    background: #e55337; /* Darker shade when hovered */
+}
