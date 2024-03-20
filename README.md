@@ -19,9 +19,9 @@ These instructions will get you a copy of the projects up and running on your lo
 git clone https://github.com/NarutBaheer/Frontend-Projects.git
 
 # Navigate into the repository
-cd WebDevPortfolio
-# Assuming you have a project folder named 'LandingPage'
-cd LandingPage
+cd Frontend-Projects
+# Assuming you have a project folder named 'Baheer's story'
+cd Baheer's story
 
 # Now, open the 'index.html' file in your default web browser.
 # The command may vary depending on your operating system.
