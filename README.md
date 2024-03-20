@@ -2,23 +2,35 @@
 
 Welcome to the Frontend Projects repository! This collection showcases various projects built using HTML, CSS, and JavaScript. These projects are designed to demonstrate web development skills, creativity, and understanding of frontend technologies. Each project in this repository has its unique features and learning outcomes.
 
-## Projects Overview
-
-Below is a list of projects included in this repository, along with a brief description of each:
-
-1. **Project Name 1** - A brief description of what this project does and what technologies it uses.
-2. **Project Name 2** - A brief description of what this project does and what technologies it uses.
-3. **Project Name 3** - A brief description of what this project does and what technologies it uses.
-
 Feel free to browse through the projects to get a better understanding of my frontend development capabilities.
+
+### Technologies Used
+
+- **HTML**: The backbone of the web, used to structure content.
+- **CSS**: For styling and visually designing the web pages.
+- **JavaScript**: To make the pages interactive and dynamic.
 
 ## Getting Started
 
 These instructions will get you a copy of the projects up and running on your local machine for development and testing purposes.
 
-### Prerequisites
-
-What things you need to install the software and how to install them:
-
 ```bash
-Give examples
+# Clone the repository
+git clone https://github.com/NarutBaheer/Frontend-Projects.git
+
+# Navigate into the repository
+cd WebDevPortfolio
+# Assuming you have a project folder named 'LandingPage'
+cd LandingPage
+
+# Now, open the 'index.html' file in your default web browser.
+# The command may vary depending on your operating system.
+
+# For macOS:
+open index.html
+
+# For Windows:
+start index.html
+
+# For Linux:
+xdg-open index.html
