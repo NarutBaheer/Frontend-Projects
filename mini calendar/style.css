@@ -1,0 +1,55 @@
+:root {
+    --bg-color: rgb(8, 4, 35);
+    --container-bg-color: white;
+    --text-primary: orangered;
+    --text-secondary: darkgray;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+}
+
+.calendar-container {
+    background-color: var(--container-bg-color);
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.month-name, .day-name, .day-number, .year {
+    margin: 10px 0;
+}
+
+.month-name {
+    background-color: var(--text-primary);
+    color: white;
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.day-name, .year {
+    color: var(--text-secondary);
+    font-size: 1.25em;
+}
+
+.day-number {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .day-number {
+        font-size: 3em;
+    }
+}
