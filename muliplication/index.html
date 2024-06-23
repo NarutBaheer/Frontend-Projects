@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ضرب</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Math Quiz</h1>
+            <div class="score" id="score">Score: 0</div>
+        </header>
+        <div id="question" class="question">What is 1 multiply by 1?</div>
+        <input type="text" class="input" id="input" placeholder="Enter your answer" autofocus autocomplete="off">
+        <button type="button" class="btn" id="submit">Submit</button>
+        <button type="button" class="btn small" id="reset">Reset Score</button>
+        <select id="operation" class="dropdown">
+            <option value="+">Addition</option>
+            <option value="-">Subtraction</option>
+            <option value="*">Multiplication</option>
+            <option value="/">Division</option>
+        </select>
+        <select id="difficulty" class="dropdown">
+            <option value="1">Easy</option>
+            <option value="2">Medium</option>
+            <option value="3">Hard</option>
+        </select>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
